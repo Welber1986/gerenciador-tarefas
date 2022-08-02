@@ -1,0 +1,41 @@
+.container-login {
+    .logo{
+        width: 178.35px;
+        display: block;
+        margin: auto;
+        margin-bottom: 47px;
+    }
+    .input{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+
+        img{
+            width: 16px;
+            margin-right: 18px;
+        }
+
+        input{
+            width: 224px;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            border-radius: 0px;
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+            padding-bottom: 8px;   
+            border-bottom-color: #ED1164; 
+        }
+    }
+    button{
+        width: 100%;
+        height: 56px;
+        background-color: #ED1164;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+}
