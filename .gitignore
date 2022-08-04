@@ -34,5 +34,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# Senha de Produção
+# Remove dados de produção
 *.env
