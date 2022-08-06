@@ -15,6 +15,7 @@ export const Footer = () => {
                         <label>até:</label>
                         <input type='date'/>
                     </div>
+                    <div className="line"></div>
                     <div>
                         <label>Status:</label>
                         <select>
