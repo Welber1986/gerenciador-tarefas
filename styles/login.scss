@@ -1,3 +1,5 @@
+@import './configs.scss';
+
 .container-login {
     .logo{
         width: 178.35px;
@@ -5,6 +7,13 @@
         margin: auto;
         margin-bottom: 47px;
     }
+
+    form{
+      padding-left: 10px;
+      padding-right: 10px; 
+      border-width: 0px;
+    }
+
     .input{
         display: flex;
         flex-direction: row;
@@ -16,7 +25,7 @@
         }
 
         input{
-            width: 224px;
+            width: 204px;
             font-size: 14px;
             letter-spacing: 0.01em;
             border-radius: 0px;
@@ -25,17 +34,77 @@
             border-right-width: 0px;
             border-bottom-width: 1px;
             padding-bottom: 8px;   
-            border-bottom-color: #ED1164; 
+            border-bottom-color: $mediumGreyColor; 
+            color: $primaryColor;
+
+            outline: none;
+
+            &:focus{
+                border-bottom-color: $primaryColor;
+                
+            }
+
+            &::placeholder{
+                color:$mediumGreyColor;
+                opacity: 1;
+            }
+
+            &::-ms-inpu-placeholder{
+                color:$mediumGreyColor;
+                opacity: 1;
+            }
+
+            &:-ms-inpu-placeholder{
+                color:$mediumGreyColor;
+                opacity: 1;
+            }
+
         }
     }
     button{
         width: 100%;
-        height: 56px;
-        background-color: #ED1164;
+        height: 50px;
+        background-color: $primaryColor;
         color: white;
         border: none;
         border-radius: 12px;
         font-size: 16px;
         margin-top: 30px;
+    }
+
+    @media screen and(min-width:$mediaDesktop) {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        .logo{
+            width: 520px;
+            margin: 0px;
+        }
+
+        form{
+            border-style: solid;
+            border-width: 1px;
+            border-color: $primaryColor;
+            border-radius: 30px;
+            padding: 80px 40px;
+
+            .input{
+                padding-bottom: 25px;
+                img{
+                    width: 24px;
+                }
+                input{
+                    font-size: 16px;
+                    width: 343px;
+                }
+            }
+            button{
+                height: 64px;
+                font-size: 18px;
+            }
+        }
     }
 }
