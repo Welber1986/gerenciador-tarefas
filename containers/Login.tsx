@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { NextPage } from "next";
 import React, {useState, MouseEvent} from "react";
-import { executeRequest } from "../services/ApiServices";
+import { executeRequest } from "../services/apiServices";
 import { AccessTokenProps } from "../types/AccessTokenProps";
 
 
