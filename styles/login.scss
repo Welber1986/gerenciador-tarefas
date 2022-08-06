@@ -1,118 +1,111 @@
 @import './configs.scss';
 
 .container-login {
-    .logo{
+    .logo {
         width: 178.35px;
         display: block;
         margin: auto;
-        margin-bottom: 47px;
+        margin-bottom: 30px;
     }
 
-    form{
-      padding-left: 10px;
-      padding-right: 10px; 
-      border-width: 0px;
-
-      p {
-        color: white;
-        font-weight: bold;
-        font-size: 16px;
+    p {
         text-align: center;
-        background-color: $mediumGreyColor;
-        border-radius: 7px;
-      }
+        color: $errorColor;
+        font-weight: bold;
+        max-width: 300px;
     }
 
-    .input{
+    .disabled {
+        background-color: $mediumGreyColor;
+    }
+
+    .input {
         display: flex;
         flex-direction: row;
         padding: 10px;
 
         img{
-            width: 16px;
-            margin-right: 18px;
+            width: 20px;
+            margin-right: 10px;
+            margin-top: -10px;
         }
 
-        input{
-            width: 204px;
+        input {
+            width: 224px;
             font-size: 14px;
             letter-spacing: 0.01em;
+            color: $primaryColor;
             border-radius: 0px;
             border-top-width: 0px;
             border-left-width: 0px;
             border-right-width: 0px;
-            border-bottom-width: 1px;
-            padding-bottom: 8px;   
-            border-bottom-color: $mediumGreyColor; 
-            color: $primaryColor;
+            border-bottom-width: 0.1em;
+            border-color: $mediumGreyColor;
+            padding-bottom: 8px;
 
             outline: none;
 
-            &:focus{
-                border-bottom-color: $primaryColor;
-                
+            &:focus {
+                border-color: $primaryColor;
             }
 
-            &::placeholder{
-                color:$mediumGreyColor;
+            &::placeholder {
+                color: $mediumGreyColor;
                 opacity: 1;
             }
 
-            &::-ms-inpu-placeholder{
-                color:$mediumGreyColor;
-                opacity: 1;
+            &:-ms-input-placeholder {
+                color: $mediumGreyColor;
             }
 
-            &:-ms-inpu-placeholder{
-                color:$mediumGreyColor;
-                opacity: 1;
+            &::-ms-input-placeholder{
+                color: $mediumGreyColor;
             }
-
         }
     }
-    button{
+
+    button {
         width: 100%;
-        height: 50px;
+        height: 56px;
         background-color: $primaryColor;
-        color: white;
         border: none;
+        color: white;
         border-radius: 12px;
         font-size: 16px;
         margin-top: 30px;
     }
 
-    @media screen and(min-width:$mediaDesktop) {
+    @media screen and (min-width:1024px) {
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-
+        
         .logo{
-            width: 520px;
+            width:520px;
             margin: 0px;
         }
 
-        form{
-            border-style: solid;
-            border-width: 1px;
-            border-color: $primaryColor;
-            border-radius: 30px;
-            padding: 80px 40px;
+        p {
+            max-width: none;
+        }
 
+        form {
+            border-style: solid;
+            border-color: $primaryColor;
+            border-width: 0.1em;
+            border-radius: 32px;
+            padding: 80px 40px;
+            
             .input{
-                padding-bottom: 25px;
                 img{
-                    width: 24px;
+                    width: 20px;
                 }
+
                 input{
-                    font-size: 16px;
                     width: 343px;
                 }
-            }
-            button{
-                height: 64px;
-                font-size: 18px;
             }
         }
     }
