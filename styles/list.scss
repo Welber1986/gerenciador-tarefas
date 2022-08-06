@@ -13,7 +13,7 @@
     }
 
     img {
-        width: 280px;
+        width: 240px;
     }
 
     p{
@@ -21,6 +21,8 @@
         font-size: 14px;
         display: block;
         font-weight: bold;
+        min-width: 240px;
+        text-align: center;
     }
 
     @media screen and (min-width:1024px) {
