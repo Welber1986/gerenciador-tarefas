@@ -21,7 +21,7 @@ const Index: NextPage = () => {
   }, [accessToken]);
 
   return (
-     !accessToken ? <Login setAccessToken={setAccessToken} /> : <Home />
+     !accessToken ? <Login setAccessToken={setAccessToken} /> : <Home setAccessToken={setAccessToken} />
   );
 }
 
