@@ -17,7 +17,7 @@ export const Home : NextPage<AccessTokenProps> = ({setAccessToken}) => {
     const [status, setStatus] = useState('0');
 
     //modal
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
     const [error, setError] = useState('');
     const [name, setName] = useState('');
     const [modalPrevisionDateStart, setModalPrevisionDateStart] = useState('');
