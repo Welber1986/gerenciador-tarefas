@@ -13,7 +13,7 @@ type ListProps = {
 
 export const List: NextPage<ListProps> = ({tasks, getFilteredList}) => {
     
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
     const [error, setError] = useState('');
     const [_id, setId] = useState('');
     const [name, setName] = useState('');
