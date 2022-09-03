@@ -1,22 +1,22 @@
-/* eslint-disable @next/next/no-img-element */
 import { NextPage } from 'next';
 import React from 'react';
 
 type HeaderProps = {
-    sair() : void
+    sair() : void,
+    setShowModal(e : boolean) : void
 }
 
-export const Header : NextPage<HeaderProps> = ({sair}) => {
+export const Header: NextPage<HeaderProps> = ({sair, setShowModal}) => {
 
-    const fullname = localStorage.getItem('userName');
-    const userName = fullname?.split(' ')[0] || '...';
+    const fullName = localStorage.getItem('userName');
+    const userName = fullName?.split(' ')[0] || '...';
 
     return (
         <div className="container-header">
             <img src="/logo.svg" alt="Logo Fiap" className="logo"/>
-            <button><span>+</span>Adicionar Tarefa</button>
+            <button onClick={e => setShowModal(true)}><span>+</span>Adicionar Tarefa</button>
             <div className="mobile">
-                <span>Olá  {userName}</span>
+                <span>Olá {userName}</span>
                 <img src="/exit-mobile.svg" alt="Sair" onClick={sair}/>
             </div>
             <div className="desktop">
